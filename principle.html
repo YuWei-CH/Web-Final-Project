@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nostr Protocol Overview</title>
+    <link rel="stylesheet" href="assets/css/sub-style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="home-button">HOME</a>
+      <div class="page-title">Nostr Protocol: A New Dawn for Social Media</div>
+    </header>
+
+    <div class="content">
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="#why-decentralization"
+              >How to Defeat the Digital Dictator</a
+            >
+          </li>
+          <li>
+            <a href="#history-section">The History of “Future Internet”</a>
+          </li>
+          <li>
+            <a href="#principles-section">Thoughts from Beer-Loving Geniuses</a>
+          </li>
+          <li>
+            <a href="#social-media-crypto-section"
+              >Incoming Life: spend on you want, speak what you want</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="main-content">
+        <section id="introduction" class="section">
+          <h2 class="section-title">What is Nostr?</h2>
+          <p>
+            Nostr stands for Notes and Other Stuff Transmitted by Relays. It is
+            a protocol that envisions a new kind of social network — one that is
+            open, decentralized, and resilient. Designed with simplicity in
+            mind, Nostr utilizes JSON-based event objects and elliptic-curve
+            cryptography to provide a platform where messages can be freely
+            exchanged without censorship.
+          </p>
+          <!-- Embedding the YouTube video -->
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/5W-jtbbh3eA?si=vs6xMVhn8IMlxo6m"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+
+        <section id="necessity-nostr" class="section">
+          <h2 class="section-title">Understanding Nostr's JSON Structure</h2>
+          <p>
+            Nostr events are JSON objects that represent the fundamental data
+            unit within the protocol. Each event contains several fields:
+          </p>
+          <ul>
+            <li><strong>id</strong>: A unique identifier for the event.</li>
+            <li>
+              <strong>kind</strong>: An integer representing the type of event.
+            </li>
+            <li>
+              <strong>pubkey</strong>: The public key of the user who created
+              the event.
+            </li>
+            <li>
+              <strong>created_at</strong>: A timestamp for when the event was
+              created.
+            </li>
+            <li>
+              <strong>content</strong>: The content of the event (e.g., a
+              message).
+            </li>
+            <li>
+              <strong>tags</strong>: An array of tags for additional context or
+              metadata.
+            </li>
+            <li>
+              <strong>sig</strong>: A cryptographic signature to verify the
+              event's integrity and authenticity.
+            </li>
+          </ul>
+          <p>
+            This standardized structure ensures that events are easily created,
+            propagated, and verified across the Nostr network.
+          </p>
+          <div class="image-container">
+            <img
+              src="assets/images/nostr-json.png"
+              alt="Nostr JSON Structure Example"
+              class="content-image"
+            />
+          </div>
+        </section>
+
+        <section id="core-principles" class="section">
+          <h2 class="section-title">Core Principles of Nostr</h2>
+
+          <!-- Cryptography in Nostr -->
+          <div id="cryptography" class="sub-section">
+            <h3 class="sub-section-title">Cryptography in Nostr</h3>
+            <p>
+              Nostr employs elliptic-curve cryptography to secure
+              communications. Each user has a pair of keys: a public key that
+              can be shared with anyone, and a private key that remains
+              confidential. Information is encrypted and signatures are verified
+              to ensure data integrity and authenticity. This cryptographic
+              foundation guarantees that only the intended recipients can
+              decipher messages and validates the origin of each message.
+            </p>
+          </div>
+
+          <!-- Decentralization and User Control -->
+          <div id="decentralization" class="sub-section">
+            <h3 class="sub-section-title">Decentralization and User Control</h3>
+            <p>
+              Nostr's decentralized nature means no central entity has control
+              over the network. Users are in command of their data, choosing
+              which relays to publish to and subscribe from. This distribution
+              of power fosters a resilient network immune to single points of
+              failure and censorship.
+            </p>
+          </div>
+
+          <!-- Principle of Relays -->
+          <div id="relays-principle" class="sub-section">
+            <h3 class="sub-section-title">Principle of Relays</h3>
+            <p>
+              Relays in Nostr function as servers that pass messages but don't
+              control the network. They are interchangeable and operate based on
+              the principle of redundancy, ensuring that if one relay goes down,
+              others are available to take its place, maintaining the network's
+              robustness.
+            </p>
+          </div>
+        </section>
+
+        <section id="additional-resources" class="section">
+          <h2 class="section-title">Learn More About Nostr</h2>
+          <ul class="resources-list">
+            <li>
+              <a
+                href="https://wiki.wellorder.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Nostr, an Introduction - scsibug</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://hivemind.vc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Why I’m Betting Big on Nostr - Max Webster</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://blog.lopp.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Why Nostr Matters - Jameson Lopp</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://fiatjaf.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >A Vision for Content Discovery and Relay Usage - fiatjaf</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://blog.coracle.social/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Thoughts on Relay Browsing - Jon Staab</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://tgfb.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Thank God for Nostr Podcast</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section id="getting-started" class="section">
+          <h2 class="section-title">Getting Started with Nostr</h2>
+          <p>
+            Engaging with Nostr begins with choosing a client, which serves as
+            your interface for the network. From there, you can select relays to
+            connect to and start publishing or subscribing to content. As an
+            open protocol, anyone can build upon Nostr, creating diverse
+            applications and services.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2023 Your Name - Exploring Nostr</p>
+    </footer>
+  </body>
+</html>
