@@ -219,6 +219,26 @@ footer {
     color: #19692c; /* Darker shade of green on hover */
 }
 
+/* Blue button with contrast text */
+.nostr-button {
+    display: block; 
+    width: calc(100% - 20px); 
+    margin: 0 10px; 
+    padding: 15px 0; 
+    background-color: #0d52ff;
+    color: white; 
+    text-align: center; 
+    border-radius: 20px; 
+    font-size: 24px;
+    border: none; 
+    cursor: pointer; 
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+}
+
+.nostr-button:hover {
+    background-color: blueviolet; 
+}
 
 @media screen and (max-width: 768px) {
     .nav-bar {
