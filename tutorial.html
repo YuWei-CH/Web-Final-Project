@@ -3,17 +3,233 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nostr Protocol Overview</title>
+    <title>Nostr Tutorial</title>
     <link rel="stylesheet" href="assets/css/sub-style.css" />
   </head>
   <body>
     <header>
       <a href="index.html" class="home-button">HOME</a>
-      <div class="page-title">Tutroail for Nostr</div>
+      <div class="page-title">Tutorial For Your Nostr</div>
     </header>
+
+    <div class="content">
+      <nav class="nav-bar">
+        <!-- Navigation items -->
+        <ul>
+          <li>
+            <a href="#choose-app">Choose Your Application</a>
+          </li>
+          <li>
+            <a href="#setup">How to Setup your Nostr App”</a>
+          </li>
+          <li>
+            <a href="#relay">Become a Relay Server</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <!-- Choose Your Platform Section -->
+        <section id="choose-app" class="section">
+          <h2 class="section-title">Find Your Nostr Application</h2>
+
+          <div class="form-group">
+            <label for="mobile-platform" class="form-label"
+              >Mobile Platform:</label
+            >
+            <select id="mobile-platform" class="form-control">
+              <option value="">No idea</option>
+              <option value="apple">iPhone</option>
+              <option value="pixel">Pixel</option>
+              <option value="samsung">Motorola</option>
+              <option value="samsung">Samsung</option>
+              <option value="samsung">Huawei</option>
+              <option value="samsung">BlackBerry</option>
+              <option value="samsung">Oneplus</option>
+              <option value="samsung">Mi</option>
+              <option value="windows">Others</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="desktop-platform" class="form-label"
+              >Desktop Platform:</label
+            >
+            <select id="desktop-platform" class="form-control">
+              <option value="">No idea</option>
+              <option value="windows">Windows</option>
+              <option value="mac">Mac</option>
+              <option value="windows">Linux</option>
+              <option value="chromeos">Chrome OS</option>
+              <option value="windows">Others</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="preference" class="form-label"
+              >Primary Device Usage:</label
+            >
+            <select id="preference" class="form-control">
+              <option value="">No idea</option>
+              <option value="mobile">Prefer Mobile</option>
+              <option value="desktop">Half Desktop, Half Mobile</option>
+              <option value="ipad">Prefer Destop</option>
+              <option value="ipad">No APP, just Web</option>
+              <option value="ipad">I like IPAD</option>
+              <option value="ipad">OtherPad, except IPAD</option>
+            </select>
+          </div>
+
+          <button id="submit-button" class="nostr-button">Recommend</button>
+
+          <p id="recommendation-result" class="recommendation-result"></p>
+        </section>
+
+        <!-- Registration, Login, and Server Selection Section -->
+        <section id="setup" class="section">
+          <h2 class="section-title">Getting Started with Nostr</h2>
+          <p>
+            Begin your adventure with Nostr by understanding the basics of keys
+            and how they empower you to interact on the decentralized platform.
+          </p>
+
+          <div class="tutorial-step">
+            <h3>Understanding Keys</h3>
+            <p>
+              Your journey on Nostr starts by creating a public/private key
+              pair. Think of your public key as your unique username (prefixed
+              with npub1) and your private key as your secure password (prefixed
+              with nsec1). Remember, your private key is irreplaceable; store it
+              safely.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Protocol vs Client</h3>
+            <p>
+              Nostr is a protocol for communication, accessed through clients.
+              Clients can be web-based, or native to desktop and mobile, acting
+              as the interface for you to fetch and publish data to the network.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Signing Events</h3>
+            <p>
+              Every action on Nostr, known as an event, requires your signature.
+              This signature is a mathematical proof that you are the author of
+              your messages.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Choosing a Client</h3>
+            <p>
+              Choose a client that resonates with your preferences, whether it's
+              for web, desktop, or mobile. For web clients, consider using a
+              secure browser extension to manage your keys.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Finding Friends to Follow</h3>
+            <p>
+              Expand your network by following friends or prominent Nostr users.
+              Use tools like nostr.directory to connect with Twitter users on
+              Nostr.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Using Multiple Clients</h3>
+            <p>
+              With your key pair, you can log into any Nostr client and retain
+              access to your account, messages, and network.
+            </p>
+          </div>
+
+          <p>
+            Ready to dive in? Select a recommended client and start exploring
+            the Nostr network today.
+          </p>
+        </section>
+
+        <!-- Setting Up a Relay Server Section -->
+        <section id="relay" class="section">
+          <h2 class="section-title">Setting Up a Nostr Relay Server</h2>
+          <p>
+            Contributing to the Nostr network by setting up your own relay
+            server is a valuable way to support the decentralized ecosystem.
+            Here's a summary of the process:
+          </p>
+
+          <div class="tutorial-step">
+            <h3>Step 1: Server Preparation</h3>
+            <p>
+              Start with a fresh VPS running Ubuntu 22.04. Ensure that it's
+              updated and secured.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Step 2: Install Dependencies</h3>
+            <p>
+              Install necessary packages like curl, build-essential, and Rust.
+              These are prerequisites for running the relay server.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Step 3: Relay Setup</h3>
+            <p>
+              Clone the nostr-rs-relay repository and build the relay using
+              cargo, Rust's package manager.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Step 4: Configuring a Reverse Proxy</h3>
+            <p>
+              Set up a Caddy server to act as a reverse proxy. Configure it to
+              forward requests to your relay server.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Step 5: Service Management</h3>
+            <p>
+              Create a systemd service for your Nostr relay. This ensures it
+              starts on boot and restarts on failure.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Step 6: Monitoring</h3>
+            <p>
+              Keep an eye on your relay server using tools like journalctl and
+              tail to check logs and ensure it's functioning properly.
+            </p>
+          </div>
+
+          <p>
+            For detailed commands and further explanations, refer to the
+            complete guide on
+            <a
+              href="https://nutcroft.com/blog/how-to-run-your-own-nostr-relay/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Nutcroft</a
+            >.
+          </p>
+        </section>
+      </div>
+    </div>
 
     <footer>
       <p>© 2023 Yuwei Sun - Exploring Nostr</p>
     </footer>
+
+    <!-- script -->
+    <script src="assets/script/script.js"></script>
   </body>
 </html>

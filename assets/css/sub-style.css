@@ -75,10 +75,9 @@ header {
     flex-direction: column; /* Stack items vertically */
     justify-content: space-around;
     height: 100%;
-    position: fixed; /* Keep navbar fixed on scroll */
+    position: sticky; /* Keep navbar fixed on scroll */
     top: 80px; /* Set top position to the height of the header to avoid overlap */
     height: calc(100% - 80px); /* Subtract the header height from the total height */
-    position: fixed; /* Fixed positioning */
     left: 0;
     width: 250px; /* takes up 1/4  */
     height: 100%;
@@ -238,6 +237,56 @@ footer {
 
 .nostr-button:hover {
     background-color: blueviolet; 
+}
+
+.app-recommender {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.recommendation-result {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #28a745;
+    margin-top: 20px;
+}
+
+.recommendation-result {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f0f8ff;
+    border: 1px solid #a1a1a1;
+    border-radius: 5px;
+    text-align: center;
+    color: #333; 
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
 }
 
 @media screen and (max-width: 768px) {
