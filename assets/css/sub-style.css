@@ -71,35 +71,41 @@ header {
 
 
 .nav-bar {
-    display: flex; 
-    flex-direction: column; /* Stack items vertically */
-    justify-content: space-around;
-    height: 100%;
-    position: sticky; /* Keep navbar fixed on scroll */
-    top: 80px; /* Set top position to the height of the header to avoid overlap */
-    height: calc(100% - 80px); /* Subtract the header height from the total height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 80px;
+    bottom: 80px; /* Set bottom to 80px */
     left: 0;
-    width: 250px; /* takes up 1/4  */
-    height: 100%;
+    width: 250px;
     background-color: #dee2e6;
     padding: 20px;
     overflow-y: auto;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    justify-content: flex-start; /* Aligns items to the start */
+    padding-top: 80px; /* Same as the top value */
+    padding-bottom: 80px; /* Adds space at the bottom */
+    align-items: center; 
 }
 
 .nav-bar ul {
-    height: 50%; 
-    display: flex; 
-    flex-direction: column; /* Stack list items vertically */
-    justify-content: space-around; /* Evenly distribute the available space around items */
-    padding: 0;
-    
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
 }
+
+.nav-bar li {
+    text-align: center; 
+  }
 
 .nav-bar li a {
     display: block;
     color: #333;
     padding: 10px 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
@@ -112,8 +118,7 @@ header {
 
 .main-content {
     padding: 20px;
-    margin-left: 250px; 
-   
+    margin-left: 250px;
 }
 
 .main-content li{
@@ -287,6 +292,11 @@ footer {
     font-size: 18px;
     font-weight: bold;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.tutorial-step h3 {
+    font-size: 24px;
+    
 }
 
 @media screen and (max-width: 768px) {

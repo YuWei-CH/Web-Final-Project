@@ -89,20 +89,17 @@
         <section id="setup" class="section">
           <h2 class="section-title">Getting Started with Nostr</h2>
           <p>
-            Begin your adventure with Nostr by understanding the basics of keys
-            and how they empower you to interact on the decentralized platform.
+            Apps that use the Nostr protocol are cool and safe things to do,
+            where you can share views and opinions with people from any corner
+            of the world.Begin your adventure with Nostr by learning some of the
+            commonalities of the Nostr family of apps and how they empower you
+            to interact on the decentralized platform.
           </p>
-
-          <div class="tutorial-step">
-            <h3>Understanding Keys</h3>
-            <p>
-              Your journey on Nostr starts by creating a public/private key
-              pair. Think of your public key as your unique username (prefixed
-              with npub1) and your private key as your secure password (prefixed
-              with nsec1). Remember, your private key is irreplaceable; store it
-              safely.
-            </p>
-          </div>
+          <img
+            src="assets/images/Amethyst.jpg"
+            alt="Amethyst"
+            class="content-image"
+          />
 
           <div class="tutorial-step">
             <h3>Protocol vs Client</h3>
@@ -132,6 +129,30 @@
           </div>
 
           <div class="tutorial-step">
+            <h3>Downloading APP</h3>
+            <p>
+              It is important to download the right app before you start
+              exploring the decentered world. It is recommended to use official
+              app stores such as the APP Store, Play Store, Microsoft Store,
+              etc. to download them. If you want to use online web pages, we
+              recommend using Chrome or Firefox to access them. Please note that
+              since decentralized programs are not regulated,
+              <strong> do not give out any personal information.</strong>
+            </p>
+          </div>
+
+          <div class="tutorial-step">
+            <h3>Keep Your Keys</h3>
+            <p>
+              Your journey on Nostr starts by creating a public/private key
+              pair. Think of your public key as your unique username (prefixed
+              with npub1) and your private key as your secure password (prefixed
+              with nsec1). Remember, your private key is irreplaceable; store it
+              safely.
+            </p>
+          </div>
+
+          <div class="tutorial-step">
             <h3>Finding Friends to Follow</h3>
             <p>
               Expand your network by following friends or prominent Nostr users.
@@ -146,6 +167,11 @@
               With your key pair, you can log into any Nostr client and retain
               access to your account, messages, and network.
             </p>
+            <img
+              src="assets/images/nostr-network.jpg"
+              alt="Nostr Network"
+              class="content-image"
+            />
           </div>
 
           <p>
@@ -169,14 +195,20 @@
               Start with a fresh VPS running Ubuntu 22.04. Ensure that it's
               updated and secured.
             </p>
+            <code>sudo apt update && sudo apt upgrade</code>
           </div>
 
           <div class="tutorial-step">
             <h3>Step 2: Install Dependencies</h3>
             <p>
               Install necessary packages like curl, build-essential, and Rust.
-              These are prerequisites for running the relay server.
             </p>
+            <code>sudo apt install curl build-essential</code>
+            <br />
+            <code
+              >curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |
+              sh</code
+            >
           </div>
 
           <div class="tutorial-step">
@@ -185,6 +217,9 @@
               Clone the nostr-rs-relay repository and build the relay using
               cargo, Rust's package manager.
             </p>
+            <code>git clone https://github.com/fiatjaf/nostr-rs-relay.git</code>
+            <br />
+            <code>cd nostr-rs-relay && cargo build --release</code>
           </div>
 
           <div class="tutorial-step">
@@ -193,6 +228,7 @@
               Set up a Caddy server to act as a reverse proxy. Configure it to
               forward requests to your relay server.
             </p>
+            <!-- Example Caddy configuration or installation commands -->
           </div>
 
           <div class="tutorial-step">
@@ -201,7 +237,13 @@
               Create a systemd service for your Nostr relay. This ensures it
               starts on boot and restarts on failure.
             </p>
+            <!-- Example systemd service file content -->
           </div>
+          <img
+            src="assets/images/Amethyst-server1.jpeg"
+            alt="Amethyst Server"
+            class="content-image"
+          />
 
           <div class="tutorial-step">
             <h3>Step 6: Monitoring</h3>
@@ -209,6 +251,7 @@
               Keep an eye on your relay server using tools like journalctl and
               tail to check logs and ensure it's functioning properly.
             </p>
+            <code>journalctl -u your-service-name</code>
           </div>
 
           <p>
